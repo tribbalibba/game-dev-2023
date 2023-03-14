@@ -23,7 +23,119 @@ Events are HTML code that activates Javascript code
                       }" > this is bold</b>
 
 
-<br>
+<body>
+
+<img src="image.gif" onerror="myFunction()">
+
+<p>A function is triggered if an error occurs when loading the image. The function shows an alert box with a text. In this example we refer to an image that does not exist, therefore the onerror event occurs.</p>
+
+<script>
+function myFunction() {
+  alert("The image could not be loaded.");
+}
+</script>
+
+</body>
+</html>
 
 
-you do at leat 8 other events:<br>
+.droptarget {
+  float: left; 
+  width: 100px; 
+  height: 35px;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+</head>
+<body>
+
+<p>Drag the p element back and forth between the two rectangles:</p>
+
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Drag me!</p>
+</div>
+
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<p style="clear:both;" id="demo"></p>
+
+<script>
+function dragStart(event) {
+  event.dataTransfer.setData("Text", event.target.id);
+}
+
+function dragging(event) {
+  document.getElementById("demo").innerHTML = "The p element is being dragged";
+}
+
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("Text");
+  event.target.appendChild(document.getElementById(data));
+  document.getElementById("demo").innerHTML = "The p element was dropped";
+}
+</script>
+
+</body>
+</html>
+
+<html>
+
+<body onresize="myFunction()">
+
+<p>Try to resize the browser window.</p>
+
+<script>
+function myFunction() {
+  alert("You have changed the size of the browser window!");
+}
+</script>
+
+</body>
+</html>
+
+<html>
+<body ononline="onFunction()" onoffline="offFunction()">
+
+<p>Open the File menu and click on "Work Offline" to toggle between working online and offline.</p>
+
+<p><strong>Note:</strong> The ononline and onoffline events are only supported in Firefox and Internet Explorer version 8 to 10.</p>
+
+<script>
+function onFunction() {
+  alert ("Your browser is working online.");
+}
+
+function offFunction() {
+  alert ("Your browser is working offline.");
+}
+</script>
+
+</body>
+</html>
+
+<html>
+<body>
+
+Enter your name: <input type="text" name="fname" id="fname" onblur="myFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>
+
+
+
