@@ -15,7 +15,7 @@ if (myHour <18) {
  
  <h4> Example working code</h4>
  
- <input id="myNum01" type=number value="Simple if Statement for Decision Making" onclick="{
+ <input id="myNum01" type=number value="4" onclick="{
    let myIn01 = parseFloat(document.getElementById('myNum01').value)
    if (myIn01 >= 3){
        document.getElementById('myDiv01').innerHTMl = myIn01 + ' is greater than 3'
@@ -33,7 +33,7 @@ if (myHour <18) {
       
       <input type button value="complex if" onclick="{
       let  myIn01 = parsefloat(document.getElementById('myNum01').value)
-       if ((myIn01 1= 3 || myIn01 > -3) && myIn01 <=100 ){
+       if ((myIn01 != 3 || myIn01 > -3) && myIn01 <=100 ){
          document.getElementById('myDiv01').innerHTML = myIn01 + 'is complex:'
            } else {
           document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
