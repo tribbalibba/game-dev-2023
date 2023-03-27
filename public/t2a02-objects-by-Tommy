@@ -5,4 +5,8 @@ version 0.0.1
 
 objects are stored named variables
 
-<h4>
+<h4> examples objects code
+<pre>
+let myperson = {
+"firstame" : "john",
+"lastname" : "doe" 
