@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h5> Version 0.0.8 </h5>
+	<h1>T4A13-Tax-Tommy</h1>
+</head>
+<body>
+
+	<script>
+		var x = 15;   // Hourly Pay
+		var y = 8;    // Hours/Days
+		var tax = 0.3; // Tax
+
+		function calculateSalary() {
+			x = Number(document.getElementById("pay").value);
+			y = Number(document.getElementById("hours").value);
+			tax = Number(document.getElementById("tax").value) / 100;
+			var xy = x * y;
+			var xy_times_tax = xy * tax;
+			var total = xy - xy_times_tax;
+			document.getElementById("total").innerHTML = total;
+			document.getElementById("multiplied").innerHTML = total * 20;
+            document.getElementById("multiplied1").innerHTML = total * 240;
+	
