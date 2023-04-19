@@ -10,3 +10,40 @@ objects are stored named variables
 let myperson = {
 "firstame" : "john",
 "lastname" : "doe" 
+"eyeColor" : "brown"
+"age" : "92"
+   }
+
+</pre>
+  
+<h4> Example working Objects code </h4>
+    
+Something: <input type=text id="MyText01" value="Information about me"><br> 
+    
+<input type=button value="My Information" onClick="{
+                                                                    
+  let myPerson = {
+   'firstName'  : 'Tommy',
+   'middleName' : '',                                               
+   'lastName'   : 'Elliot',
+   'age'        :  17,
+   'eyeColor'   : 'Dark Brown',
+   'hairColor'  : 'brown',
+   'height'     : '178cm',
+   'weight'     : '62kg',                                                         
+   }
+                                                                
+    document.getElementById('myDiv01').innerHTML = '<br> myPerson Object has properties: <br>'
+    document.getElementById('myDiv01').innerHTML += 'FirstName: ' + myPerson.firstName + '<br>'
+    document.getElementById('myDiv01').innerHTML += 'MiddleName: ' + myPerson.middleName + '<br>'                                               
+    document.getElementById('myDiv01').innerHTML += 'LastName: ' + myPerson.lastName + '<br>'
+    document.getElementById('myDiv01').innerHTML += 'Age: ' + myPerson.age + '<br>'
+    document.getElementById('myDiv01').innerHTML += 'EyeColor: ' + myPerson.eyeColor + '<br>'
+    document.getElementById('myDiv01').innerHTML += 'HairColor: ' + myPerson.hairColor + '<br>'
+    document.getElementById('myDiv01').innerHTML += 'Height: ' + myPerson.height + '<br>'
+    document.getElementById('myDiv01').innerHTML += 'Weight: ' + myPerson.weight + '<br>'                                                
+}">
+                                                    
+<div id="myDiv01">...</div>
+  <br>
+                                                                     
