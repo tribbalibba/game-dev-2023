@@ -12,12 +12,12 @@ You use loops and variables to make fast fancy drawings <br><br>
 <input type=button value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 10;
-   myContext.strokeStyle = 'green';
+   myContext.strokeStyle = 'blue';
    myContext.arc(95, 50, 40, 0, 2 * Math.PI);
    myContext.stroke();
 }">
 
-<input type=button value=".fillText('Hello World', 400, 100)" onclick="{
+<input type=button value=".fillText('my name is Tommy', 400, 100)" onclick="{
    myContext.font = '20px Arial';
    myContext.fillText('Hello World', 400, 100);
    myContext.translate(400, 100);  
@@ -40,9 +40,9 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 <input type=button value=".createLinearGradient(100, 300, 200, 400)" onclick="{
    let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
-   myGradient.addColorStop(0, 'red');
+   myGradient.addColorStop(0, 'yellow');
    myGradient.addColorStop(0.5, 'blue');
-   myGradient.addColorStop(1, 'yellow');
+   myGradient.addColorStop(1, 'red');
 
    myContext.fillStyle = myGradient;
    myContext.fillRect(100, 300, 200, 400);
