@@ -22,7 +22,7 @@ Text example: <input id="myText1" type="text" size="70" value="" placeholder="wr
 
 <input type="button" value="Retrieve Text" onClick="{
   document.getElementById('myText1').value = localStorage.getItem('myStoredText')
-
+   document.getElementById('myText2').value = 'myStoredText'
  }">                             
  
 Retrieved text <input id="myText2" type="text" size="70" value="" placeholder=""><br>                                                    
